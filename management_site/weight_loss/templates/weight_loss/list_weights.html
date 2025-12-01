@@ -1,0 +1,48 @@
+{% extends 'weight_loss/base.html'%}
+{% load static %}
+{% block 'content'%}
+<h2>Your Weight Records</h2>
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Weight (kg)</th>
+        <th>Actions</th>
+    </tr>
+    {% for e in page_obj %}
+    <tr>
+        <td>{{ e.date }}</td>
+        <td>{{ e.time }}</td>
+        <td>{{ e.weight }}</td>
+        <td>
+            <a href="{% url 'edit_weight' e.id %}">Edit</a>
+            <a href="{% url 'delete_weight' e.id %}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<div>
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    <span> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }} </span>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+    {% endif %}
+</div>
+<div class="stats-box">
+    <h3>Your Progress Summary 📊</h3>
+    <p>Total entries: {{ total }}</p>
+    <p>Average weight: {{ avg_weight }}</p>
+    <p>Highest weight: {{ max_weight }}</p>
+    <p>Lowest weight: {{ min_weight }}</p>
+</div>
+
+<p class="motivate">
+    💪 “Your journey may be slow, but quitting won’t make it faster.”
+</p>
+
+{% endblock %}

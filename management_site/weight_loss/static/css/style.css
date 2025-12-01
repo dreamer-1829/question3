@@ -1,0 +1,117 @@
+/* ----------------------------------------------------------
+   🌸 Anime Aesthetic Theme — Soft Pastel & Clean UI Style
+   ---------------------------------------------------------- */
+
+/* Global page styling */
+body {
+    background: #f5f3ff; /* soft lavender */
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo area */
+img {
+    margin: 20px 0 10px 20px;
+}
+
+/* Navigation bar */
+nav {
+    background: #dfe7ff; 
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 10px 20px;
+    font-weight: 600;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #3f3d56; /* anime pastel dark */
+    margin-right: 12px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #8b5cf6; /* purple highlight */
+}
+
+/* Page titles */
+h1, h2 {
+    margin-left: 20px;
+    color: #5b21b6; /* darker anime purple */
+}
+
+/* Form design */
+form {
+    background: #ffffff;
+    width: 450px;
+    padding: 20px 30px;
+    margin: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+input[type="text"], input[type="date"], input[type="number"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border-radius: 8px;
+    border: 1px solid #c3b5f7;
+    background: #fafaff;
+}
+
+/* Submit Button */
+button, input[type="submit"] {
+    background: #8b5cf6;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 16px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #6d28d9;
+}
+
+/* Error message */
+.error {
+    color: #ff4d6d;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+/* Success message */
+.success {
+    color: #10b981;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+/* Weight list boxes */
+.weight-card {
+    background: #ffffff;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    border-left: 6px solid #8b5cf6;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+.welcome-box, .info-box, .stats-box, .result-box {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.motivate, .login-tip {
+    margin: 20px;
+    font-size: 18px;
+    color: #6d28d9;
+    font-weight: 600;
+}

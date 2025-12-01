@@ -1,0 +1,32 @@
+{% extends 'weight_loss/base.html'%}
+{% load static %}
+{% block 'content'%}
+<h2>Weight Loss Between Two Dates</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Calculate</button>
+</form>
+{% if result != None %}
+    <h3>Your Weight Loss: {{ result }} kg</h3>
+    <div class="info-box">
+    <p>Select two dates to check how much weight you gained or lost during that period.</p>
+</div>
+
+{% if result != None %}
+   {% if result != None %}
+<div class="result-box">
+    {% if result > 0 %}
+        <h3>You lost {{ result }} kg 🎉🔥</h3>
+    {% elif result < 0 %}
+        <h3>You gained {{ abs_result }} kg 😊</h3>
+    {% else %}
+        <h3>No weight change in this period.</h3>
+    {% endif %}
+</div>
+{% endif %}
+
+{% endif %}
+
+{% endif %}
+{% endblock %}
